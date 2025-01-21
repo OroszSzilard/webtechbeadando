@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="author" content="Orosz Szilárd">
+    <link rel="stylesheet" href="order.css">
+    <meta charset="UTF-8">
+    <script src="jquery-3.6.3.min.js"></script>
+    <link rel="icon" type="image/jpg" href="favicon.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orosz Szilárd - UB4URC</title>
+
+</head>
+
+<body>
+
+    <div id="pizzaModal" class="modal">
+        <div class="modal-content">
+
+            <div class="full_content">
+
+                <div class="pic">
+                    <span class="close cursor" onclick="closeModal('pizzaModal')">&times;</span>
+                    <img src="tal.jpg" style="width:100%" id="food_img">
+                </div>
+
+                <p class="food_name" id="food"></p>
+                <p class="requests_t">Speciális kérés számunkra:</p>
+                <textarea style="resize: none;" rows="3" cols="40" class="requests" placeholder="Bármit amit szeretnél, itt oszd meg velünk."></textarea>
+                <hr>
+                <div class="button_div">
+                    <button class="add" onclick="addToCart()">Kosárhoz adás</button>
+                    <div class="quantity">
+                        <span style="border: solid grey 1px; padding: 10px">
+                            <button id="dec" class="decrease" disabled onclick="decreaseValue()">-</button>
+                            <input id="increment" aria-label="Quantity" aria-live="assertive" disabled type="number" min="1" step="1" value="1">
+                            <button class="increase" onclick="incrementValue()">+</button>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="navbar">
+            <ul class="menu">
+                <img src="favicon.jpg" style="width: 3%; border-radius: 0 15px 0 0; margin-left: 2%; margin-right: 36%; box-shadow: 0 2px 20px 0;">
+                <li><a href="main.html#about">Rólunk</a></li>
+                <li><a href="menu.html">Menü</a></li>
+                <li><a href="#contact" id="go2" onclick="go('go2')">Elérhetőség</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="all">
+
+        <hr>
+
+        <div class="container">
+            <div class="navbar">
+                <ul class="menu2" style="margin-left: 3%;">
+                    <li><a href="#pizza" id="goes" onclick="go('goes')">Pizzák</a></li>
+                    <li><a href="#vpizza" id="goes2" onclick="go('goes2')">Vegán pizzák</a></li>
+                    <li><a href="#drink" id="goes3" onclick="go('goes3')">Üditők</a></li>
+                    <div id="order_cart" onclick="location.href='checkout.html'">
+                        <li>&#128722
+                            <input id="cart" disabled type="number" min="1" step="1" value="0">
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+        <div class="frame" style="background-image: url('about.jpg')" id="pizza"></div>
+        <h3>Pizzák</h3>
+
+        <div class="grid_container">
+
+            <div class="items" onclick="openModal('Margherita pizza', 'margherita.jpg')">
+                <div class="meal">Margherita pizza</div>
+                <div class="money" style="margin-top: 5%; margin-left: -22.5%;">2.899 Ft</div>
+                <img src="margherita.jpg" style="margin-left: 57.9%;">
+            </div>
+
+            <div class="items" onclick="openModal('Prosciutto pizza', 'pizza_prosciutto.jpg')">
+                <div class="meal">Prosciutto pizza</div>
+                <div class="money" style="margin-top: 5%;">3.099 Ft</div>
+                <img src="pizza_prosciutto.jpg" style="margin-left: 57.9%;">
+            </div>
+
+            <div class="items" onclick="openModal('Salame pizza', 'pizza_salame.jpg')">
+                <div class="meal">Salame pizza</div>
+                <div class="money" style="margin-top: 5%; margin-left: -20%;">3.099 Ft</div>
+                <img src="pizza_salame.jpg" style="margin-left: 57.9%;">
+            </div>
+
+            <div class="items" onclick="openModal('Tonno pizza', 'pizza_tonno.jpg')">
+                <div class="meal">Tonno pizza</div>
+                <div class="money" style="margin-top: 5%; margin-left: -17%;">3.199 Ft</div>
+                <img src="pizza_tonno.jpg" style="margin-left: 57.9%;">
+            </div>
+
+        </div>
+
+        <div class="frame" style="background-image: url('veganpizzabackground.jpg')" id="vpizza"></div>
+        <h3>Vegán pizzák</h3>
+
+        <div class="grid_container">
+
+            <div class="items" onclick="openModal('Quattro Formaggi pizza', 'quattroformaggi.jpg')">
+                <div class="meal" style="margin-left: 3%;">Quattro Formaggi pizza</div>
+                <div class="money" style="margin-top: 5%; margin-left: -33.5%;">3.099 Ft</div>
+                <img src="quattroformaggi.jpg" style="margin-left: 57.9%;">
+            </div>
+
+            <div class="items" onclick="openModal('Hawaii pizza', 'pizza_hawaii.jpg')">
+                <div class="meal" style="margin-left: 3%;">Hawaii pizza</div>
+                <div class="money" style="margin-top: 5%; margin-left: -18.2%;">3.199 Ft</div>
+                <img src="pizza_hawaii.jpg" style="margin-left: 57.9%;">
+            </div>
+
+        </div>
+
+        <div class="frame" style="background-image: url('italok.jpg')" id="drink"></div>
+        <h3>Üditők</h3>
+
+        <div class="grid_container">
+
+            <div class="items" onclick="openModal('Coca-cola', 'cocacola.jpg')">
+                <div class="meal" style="margin-left: 3%;">Coca-cola</div>
+                <div class="money" style="margin-top: 5%; margin-left: -13%;">569 Ft</div>
+                <img src="cocacola.jpg" style="margin-left: 57.9%;">
+            </div>
+
+            <div class="items" onclick="openModal('Fanta', 'fanta.jpg')">
+                <div class="meal" style="margin-left: 3%;">Fanta</div>
+                <div class="money" style="margin-top: 5%; margin-left: -8.2%;">389 Ft</div>
+                <img src="fanta.jpg" style="margin-left: 57.9%;">
+            </div>
+
+            <div class="items" onclick="openModal('Sprite', 'sprite.jpg')">
+                <div class="meal" style="margin-left: 3%;">Sprite</div>
+                <div class="money" style="margin-top: 5%; margin-left: -8.2%;">389 Ft</div>
+                <img src="sprite.jpg" style="margin-left: 57.9%;">
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="order.js"></script>
+
+</body>
+
+<footer id="contact">
+
+    <table style="margin-top: 3%;">
+        <tr>
+            <td class="tops">Lépjen kapcsolatba velünk</td>
+            <td class="tops">Cím</td>
+            <td class="tops">Nyitvatartás</td>
+        </tr>
+        <tr>
+            <td>06-1-948-2134</td>
+            <td>Miskolc Villanyrendőr 2025</td>
+            <td>H-P: 11-23</td>
+        </tr>
+        <tr>
+            <td>legjobbpizzak1990@gmail.com</td>
+            <td>Miskolc Diósgyőr 20/25</td>
+            <td>Szombat: 11-23</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td style="padding-bottom: 20px;">Vasárnap: 11-22</td>
+        </tr>
+    </table>
+
+    <div id="end">
+        <p style="margin-top: 1%; margin-left: 3%; padding-bottom: 2%;">©2025 by OSZ</p>
+        <img src="up.png" style="width: 4%; margin-left: 85%; margin-bottom: 1%; cursor: pointer;" id="goTop" onclick="gototop()">
+    </div>
+
+</footer>

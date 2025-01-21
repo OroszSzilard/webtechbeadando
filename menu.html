@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="author" content="Orosz Szilard">
+    <link rel="stylesheet" href="menu.css">
+    <meta charset="UTF-8">
+    <script src="jquery-3.6.3.min.js"></script>
+    <link rel="icon" type="image/jpg" href="favicon.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orosz Szilárd - UB4URC</title>
+
+</head>
+
+<body>
+
+    <div id="all">
+
+        <div class="container">
+            <div class="navbar">
+                <ul class="menu">
+                    <img src="favicon.jpg" style="width: 3%; border-radius: 0 15px 0 0; margin-left: 2%; margin-right: 36%; box-shadow: 0 2px 20px 0;">
+                    <li><a href="main.html#about">Rólunk</a></li>
+                    <li>Menü</li>
+                    <li><a href="#contact" id="go2" onclick="go('go2')">Elérhetőség</a></li>
+                    <button id="order" onclick="location.href='order.html'">Rendelés</button>
+                </ul>
+            </div>
+        </div>
+
+        <div id="menu">
+
+            <h2 style="text-align: center; margin-top: 3%; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-bottom: 2%; font-size: 45px;">Étlap</h2>
+
+            <table>
+                <tr>
+                    <td colspan="3"><h2 style="text-align: center; margin-top: 5%; color: #4CAF50;">Étlap</h2></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: center; color: #4CAF50; padding-bottom: 4%; padding-top: 4%;">Pizzák<hr></td>
+                </tr>
+                <tr>
+                    <td class="items">Margherita pizza</td>
+                    <td></td>
+                    <td class="items">Prosciutto pizza</td>
+                </tr>
+                <tr>
+                    <td class="items">2.899 Ft</td>
+                    <td></td>
+                    <td class="items">3.099 Ft</td>
+                </tr>
+                <tr>
+                    <td class="items" style="padding-top: 5%;">Salame pizza</td>
+                    <td></td>
+                    <td class="items" style="padding-top: 5%">Tonno pizza</td>
+                </tr>
+                <tr>
+                    <td class="items">3.099 Ft</td>
+                    <td></td>
+                    <td class="items">3.199 Ft</td>
+                </tr>
+
+                <tr>
+                    <td colspan="3" style="text-align: center; color: #4CAF50; padding-bottom: 4%; padding-top: 4%;">Vegán pizzák<hr></td>
+                </tr>
+                <tr>
+                    <td class="items">Quattro Formaggi</td>
+                    <td></td>
+                    <td class="items">Hawaii pizza</td>
+                </tr>
+                <tr>
+                    <td class="items">3.099 Ft</td>
+                    <td></td>
+                    <td class="items">3.199 Ft</td>
+                </tr>
+
+                <tr>
+                    <td colspan="3" style="text-align: center; color: #4CAF50; padding-bottom: 4%; padding-top: 4%;">Üditők<hr></td>
+                </tr>
+                <tr>
+                    <td class="items">Coca-cola</td>
+                    <td></td>
+                    <td class="items">Fanta</td>
+                </tr>
+                <tr>
+                    <td class="items">569 Ft</td>
+                    <td></td>
+                    <td class="items">389 Ft</td>
+                </tr>
+                <tr>
+                    <td class="items" style="padding-top: 5%;">Sprite</td>
+                <tr>
+                    <td class="items">389 Ft</td>
+                </tr>
+
+            </table>
+        </div>
+
+    </div>
+
+    <script src="menu.js"></script>
+
+</body>
+
+<footer id="contact">
+
+    <table style="margin-top: 3%;">
+        <tr>
+            <td class="tops">Lépjen kapcsolatba velünk</td>
+            <td class="tops">Cím</td>
+            <td class="tops">Nyitvatartás</td>
+        </tr>
+        <tr>
+            <td>06-1-948-2134</td>
+            <td>Miskolc Villanyrendőr 2025</td>
+            <td>H-P: 11-23</td>
+        </tr>
+        <tr>
+            <td>legjobbpizzak1990@gmail.com</td>
+            <td>Miskolc Diósgyőr 20/25</td>
+            <td>Szombat: 11-23</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td style="padding-bottom: 20px;">Vasárnap: 11-22</td>
+        </tr>
+    </table>
+
+    <div id="end">
+        <p style="margin-top: 1%; margin-left: 3%; padding-bottom: 2%;">©2025 by OSZ</p>
+        <img src="up.png" style="width: 4%; margin-left: 85%; margin-bottom: 1%; cursor: pointer;" id="goTop" onclick="gototop()">
+    </div>
+
+</footer>

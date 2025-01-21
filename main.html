@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="author" content="Orosz Szilard">
+    <link rel="stylesheet" href="main_style.css">
+    <meta charset="UTF-8">
+    <script src="jquery-3.6.3.min.js"></script>
+    <link rel="icon" type="image/jpg" href="favicon.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orosz Szilard - UB4URC</title>
+
+</head>
+
+<body>
+
+    <div id="all">
+
+        <div style="background-color: #66a1d8; height: 40px;">
+            <p style="margin: 0; padding:0.5%; text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: white;">Rendelj most, szállítási díj nélkül!</p>
+        </div>
+
+        <div class="container">
+            <div class="navbar">
+                <ul class="menu">
+                    <img src="favicon.jpg" style="width: 3%; border-radius: 0 15px 0 0; margin-left: 2%; margin-right: 36%; box-shadow: 0 2px 20px 0;">
+                    <li><a href="#about" id="go1" onclick="go('go1')">Rólunk</a></li>
+                    <li><a href="menu.html">Menü</a></li>
+                    <li><a href="#contact" id="go2" onclick="go('go2')">Elérhetőség</a></li>
+                    <button id="order" onclick="location.href='order.html'">Rendelés</button>
+                </ul>
+            </div>
+        </div>
+
+        <div style="margin: 0%; padding: 0%;">
+            <img src="pizza_hatter.jpg" width="100%">
+        </div>
+
+        <div id="items">
+            <table style="width:80%">
+                <tr>
+                    <td><img src="pizza_pictogram.png"  class="pics" ></td>
+                    <td><img src="veganpizza_pictogram.png"  class="pics"></td>
+                    <td><img src="drink_pictogram.png"  class="pics" style="margin-left: 32%;"></td>
+                </tr>
+                <tr>
+                    <td class="texts">Pizzák</td>
+                    <td class="texts">Vegán Pizzák</td>
+                    <td class="texts">Üditők</td>
+                </tr>
+                <tr>
+                    <td><button onclick="location.href='order.html'">Rendeljen most</button></td>
+                    <td><button onclick="location.href='order.html'">Rendeljen most</button></td>
+                    <td><button onclick="location.href='order.html'">Rendeljen most</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="about" style="margin-bottom: 5%;">
+            <img class="bg" src="about.jpg" width="100%">
+            <div class="content" id="blur">
+                <h2 style="margin-top: 5%; font-size: 45px; margin-bottom: 2%; text-shadow: 5px 5px 8px black;">Rólunk:</h2>
+                <p style="margin-right: 55%; font-size: 25pt; text-shadow: 3px 3px 5px black;">A pizzánk a legmagasabb minőségű alapanyagokból készülnek, amelyeket gondosan válogatunk ki. A tésztánk frissen készül minden nap, a paradicsomszószunk pedig saját recept alapján készül. A feltétek széles választékát kínáljuk, így mindenki megtalálja a kedvencét.
+
+                    A pizzáinkat hagyományos kemencében sütjük, így azok kívül ropogósak, belül pedig puha és lédúsak lesznek. A pizzáinkat frissen, melegen szállítjuk, így biztos lehet benne, hogy a lehető legjobb minőségű pizzát kapja.
+                    
+                    A pizzánkkal kapcsolatban bármilyen kérdése van, kérjük, ne habozzon kapcsolatba lépni velünk.</p>
+            </div>
+        </div>
+
+        <div id="contact">
+            <table style="margin: 0 auto;">
+                <tr>
+                    <td>
+                        <div class="containers">
+                            <img src="pizza.jpg" class="image">
+                            <div class="overlay">
+                                <div class="text">Pizzák</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="containers">
+                            <img src="veganpizzak.jpg" class="image">
+                            <div class="overlay">
+                                <div class="text">Vegán Pizzák</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="containers">
+                            <img src="drinks.jpg" class="image">
+                            <div class="overlay">
+                                <div class="text">Italok</div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+<footer>
+
+    <table style="margin-top: 3%;">
+        <tr>
+            <td class="tops">Lépjen kapcsolatba velünk</td>
+            <td class="tops">Cím</td>
+            <td class="tops">Nyitvatartás</td>
+        </tr>
+        <tr>
+            <td>06-1-948-2134</td>
+            <td>Miskolc Villanyrendőr 2025</td>
+            <td>H-P: 11-23</td>
+        </tr>
+        <tr>
+            <td>legjobbpizzak1990@gmail.com</td>
+            <td>Miskolc Diósgyőr 20/25</td>
+            <td>Szombat: 11-23</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td style="padding-bottom: 20px;">Vasárnap: 11-22</td>
+        </tr>
+    </table>
+
+    <div id="end">
+        <p style="margin-top: 1%; margin-left: 3%; padding-bottom: 2%;">©2025 by OSZ</p>
+        <img src="up.png" style="width: 4%; margin-left: 85%; margin-bottom: 1%; cursor: pointer;" id="goTop" onclick="gototop()">
+    </div>
+
+</footer>
